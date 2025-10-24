@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvTheTask - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="brand">
+
+            <h1 class="brand-name">LuvTheTask</h1>
+        </div>
+        
+        <div class="profile-card">
+            
+            <div class="avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            
+            <h1>Welcome, <%=  username   %></h1>
+            <p class="tagline">Productivity Enthusiast & Task Manager</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value"><%=  total  %></div>
+                    <div class="stat-label">Tasks Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value"><%=  total  %></div>
+                    <div class="stat-label">Active Tasks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">96%</div>
+                    <div class="stat-label">Productivity</div>
+                </div>
+            </div>
+            
+            <div class="buttons-container">
+                <button class="btn btn-primary">
+                    <a href = "/">
+                    <i class="fas fa-home"></i> Home
+                    </a>
+                </button>
+                <button class="btn btn-secondary">
+                    <a href = "/alltask">
+                    <i class="fas fa-tasks"></i> Your Tasks
+                    </a>
+                </button>
+                <button class="btn btn-danger">
+                    <a href = "/logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src = "/javascripts/profile.js"></script>
+</body>
+</html>

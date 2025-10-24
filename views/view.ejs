@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvTheTask - All Tasks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/view.css">
+</head>
+<body>
+    <div class="floating-elements">
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h1 class="brand-name">LuvTheTask</h1>
+            </div>
+            
+            <div class="nav-buttons">
+                <a href="/task" class="btn btn-primary" id="addTaskBtn">
+                    <i class="fas fa-plus-circle"></i> Add Task
+                </a>
+                <a href="/profile" class="btn btn-outline" id="viewProfileBtn">
+                    <i class="fas fa-user"></i> Profile
+                </a>
+            </div>
+        </header>
+        
+        <section class="main-content">
+            <h1 class="page-title">Your Tasks</h1>
+            
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-value" id="totalTasks">5</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="completedTasks">2</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="pendingTasks">3</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+            
+            <div class="tasks-container" id="tasksContainer">
+                <%   task.forEach((e)=>{   %>
+                <div class="task-card" data-id="1">
+                    <div class="task-header">
+                        <h3 class="task-title"><%=  e.title    %></h3>
+                        <div class="task-actions">
+                            <a href="/edit/<%=  e.title  %>" class="action-link edit-link" data-id="1">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="/delete/<%=  e.title  %>" class="action-link delete-link" data-id="1">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                            <a href="/done/<%=  e.title   %>" class="action-link done-link" data-id="1">
+                                <i class="fas fa-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="task-description">
+                        <%=  e.detail   %>
+                    </div>
+                    <div class="task-meta">
+                        <div class="task-date">
+                            <i class="far fa-calendar"></i>
+                            <%=  e.date   %>
+                        </div>
+                        <div class="task-priority priority-high">
+                            High Priority
+                        </div>
+                    </div>
+                </div>
+              <%  })   %>
+
+            </div>
+        </section>
+    </div>
+    <script src = "/javascripts/view.js"></script>
+</body>
+</html>

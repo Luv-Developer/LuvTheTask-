@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvTheTask - Edit Task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/edit.css">
+</head>
+<body>
+    <div class="floating-elements">
+        <!-- Floating elements for background animation -->
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="brand-logo">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h1 class="brand-name">LuvTheTask</h1>
+            </div>
+            
+            <div class="nav-buttons">
+                <a href="/alltask" class="btn btn-outline" id="backBtn">
+                    <i class="fas fa-arrow-left"></i> Back to Tasks
+                </a>
+            </div>
+        </header>
+        
+        <section class="main-content">
+            <h1 class="page-title">Edit Task</h1>
+            
+            <div class="edit-form-container">
+                <form action = "/edit" method = "post" id="editTaskForm">
+                    <div class="form-group">
+                        <label class="form-label" for="previousTitle">
+                            <i class="fas fa-file-alt"></i> Previous Title
+                        </label>
+                        <div class="input-container">
+                            <input 
+                                value = "<%=  title2   %>"
+                                name = "prev"
+                                type="text" 
+                                id="previousTitle" 
+                                class="form-input" 
+                                readonly
+                            >
+                            <i class="fas fa-lock input-icon"></i>
+                        </div>
+                        <div class="input-hint">This field shows the current task title and cannot be edited directly</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="newTitle">
+                            <i class="fas fa-edit"></i> New Title
+                        </label>
+                        <div class="input-container">
+                            <input 
+                                name = "new"
+                                type="text" 
+                                id="newTitle" 
+                                class="form-input" 
+                                placeholder="Enter the updated task title..."
+                                required
+                            >
+                            <i class="fas fa-pencil-alt input-icon"></i>
+                        </div>
+                        <div class="input-hint">Enter the new title for your task. Make it descriptive and clear.</div>
+                    </div>
+                    
+                    <div class="comparison-container">
+                        <div class="title-box old">
+                            <div class="title-label">Current Title</div>
+                            <div class="title-content" id="currentTitleDisplay"><%=  title2   %></div>
+                        </div>
+                        <div class="comparison-arrow">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </div>
+                        <div class="title-box new">
+                            <div class="title-label">New Title</div>
+                            <div class="title-content" id="newTitleDisplay">Enter new title...</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="cancelBtn">
+                            <a href = "/alltask">
+                            <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Update Task
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src = "/javascripts/edit.js"></script>
+</body>
+</html>

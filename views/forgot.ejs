@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvTheTask - Reset Password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/forgot.css">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>Luv<span>The</span>Task</h1>
+        </div>
+        
+        <div class="card">
+            <h2>Reset Your Password</h2>
+            <p>Enter your email address and we'll send you a link to reset your password.</p>
+            
+            <form action = "/forgot" method = "post" id="resetForm">
+                <div class="input-group">
+                    <input name = "email" type="email" class="input-field" id="email" placeholder="Email Address" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                
+                <button type="submit" class="btn">Send</button>
+                
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Password reset link has been sent to your email!</span>
+                </div>
+                
+                <div class="back-link">
+                    <a href="/login"><i class="fas fa-arrow-left"></i> Back to Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src = "/javascripts/forgot.js"></script>
+</body>
+</html>

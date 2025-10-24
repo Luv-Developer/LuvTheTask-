@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvTheTask - Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" type = "text/css" href = "/stylesheets/register.css">
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>Luv<span>The</span>Task</h1>
+        </div>
+        
+        <div class="card">
+            <h2>Create Your Account</h2>
+            
+            <form action = "/register" method = "post" id="registerForm">
+                <div class="input-group">
+                    <input name = "username" type="text" class="input-field" id="username" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                
+                <div class="input-group">
+                    <input name = "email" type="email" class="input-field" id="email" placeholder="Email Address" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                
+                <div class="input-group">
+                    <input name = "password" type="password" class="input-field" id="password" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                
+                <button type="submit" class="btn">Register</button>
+                
+                <div class="login-link">
+                    Already have an account? <a href="/login">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src = "/javascripts/register.js"></script>
+</body>
+</html>
