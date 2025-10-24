@@ -180,7 +180,7 @@ app.get("/profile",isloggedin,async(req,res)=>{
         alltask.push(e)
     })
     let total = alltask.length
-    res.render("Profile",{username,total})
+    res.render("profile",{username,total})
 })
 
 app.get("/task",isloggedin,(req,res)=>{
